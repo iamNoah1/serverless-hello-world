@@ -2,10 +2,6 @@
 
 module.exports.hello = (event, context, callback) => {
 
-  console.log('testtttt')
-
-  console.log('context: ' + JSON.stringify(context))
-
   const response = {
     statusCode: 200,
     body: JSON.stringify({
