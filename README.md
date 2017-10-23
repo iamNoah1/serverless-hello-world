@@ -4,9 +4,10 @@ This is an example hello world api created with the serverless framework that ru
 
 ## Prerequisites 
 
-* You have AWS Access keys 
-* `cp aws-secrets.example aws-secrets`
-* `source aws-secrets`
+* You have made you AWS access and secret key available through a provided method, like storing them in the ~/.aws/credentials file or export them into environment variables
+* You need to install Node.js  with a minimum version of 6.5.0 
+* Then you need to install the serverless CLI with `sudo npm install -g serverless` 
+* `npm install`
 
 
 ## Deploy 
@@ -22,28 +23,3 @@ Now you could invoke the Lambda with `serverless invoke -f hello -l` if everyth
 ## Undeploy
 
 * `serverless remove`
-
-
-## Create API Gateway 
-
-Now you have deployed your lambda and can invoke it via serverless. But you may want call it like a 'real' REST API, so we need to place an API Gateway which calls our Lambda Function. 
-
-* The Swagger API definition can be found [here](api-definition.yml)
-* Go to the API Gateway section in the AWS console UI and create a new API Gateway with the API definition. 
-* After that you need to specify an action for the hello endpoint, where you select the deployed Lambda. 
-* Now you could test the API via UI in order to see if everything works fine
-* Deploy the API with the 'Actions' Dropdown box and create a stage on the way 
-
-
-## Test the Gateway
-
-For testing the API I recomment using Postman because of the way you have authorize your request which is pretty convenient using Postman. 
-
-* Choose AWS Signature for authorization method 
-* Fill in your Access and Secret key as well as the region your user
-* You can grab the API Gateway URL by clicking on the created stage
-* Fire your request and you should get a response 
-
-
-
-
