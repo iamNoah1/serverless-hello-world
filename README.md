@@ -1,5 +1,5 @@
 # Serverless hello world
-This is an example hello world api created with the serverless framework that runs on AWS Lambda.
+This is an example hello world app created with the serverless framework that runs on AWS Lambda.
 
 
 ## Prerequisites
